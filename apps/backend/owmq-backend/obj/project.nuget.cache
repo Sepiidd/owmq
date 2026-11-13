@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PXXurAmXhB4=",
+  "success": true,
+  "projectFilePath": "/home/sebastian/projects/owmq/owmq/apps/backend/owmq-backend/owmq-backend.csproj",
+  "expectedPackageFiles": [
+    "/home/sebastian/.nuget/packages/microsoft.aspnetcore.openapi/10.0.15/microsoft.aspnetcore.openapi.10.0.15.nupkg.sha512",
+    "/home/sebastian/.nuget/packages/microsoft.openapi/2.13.0/microsoft.openapi.2.13.0.nupkg.sha512"
+  ],
+  "logs": []
+}
