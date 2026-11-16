@@ -83,19 +83,19 @@
     ]
   },
   "packageFolders": {
-    "/home/sebastian/.nuget/packages/": {}
+    "/home/sebastian-pc/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/sebastian/projects/owmq/owmq/apps/backend/owmq-backend/owmq-backend.csproj",
+      "projectUniqueName": "/home/sebastian-pc/projects/owmq/owmq/apps/backend/owmq-backend/owmq-backend.csproj",
       "projectName": "owmq-backend",
-      "projectPath": "/home/sebastian/projects/owmq/owmq/apps/backend/owmq-backend/owmq-backend.csproj",
-      "packagesPath": "/home/sebastian/.nuget/packages/",
-      "outputPath": "/home/sebastian/projects/owmq/owmq/apps/backend/owmq-backend/obj/",
+      "projectPath": "/home/sebastian-pc/projects/owmq/owmq/apps/backend/owmq-backend/owmq-backend.csproj",
+      "packagesPath": "/home/sebastian-pc/.nuget/packages/",
+      "outputPath": "/home/sebastian-pc/projects/owmq/owmq/apps/backend/owmq-backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/sebastian/.nuget/NuGet/NuGet.Config"
+        "/home/sebastian-pc/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
