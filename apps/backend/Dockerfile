@@ -13,7 +13,7 @@ COPY . .
 RUN dotnet publish owmq-backend/owmq-backend.csproj -c Release -o /app/publish --no-restore /p:UseAppHost=False #restore done in previous step, useapphost false since we run dll directly
 
 # run
-FROM mcr.microsoft.com/dotnet/aspnet:10.0 as live
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS live
 WORKDIR /app
 
 COPY --from=build /app/publish .
