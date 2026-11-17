@@ -1,0 +1,3 @@
+apps/backend/owmq-backend/obj
+apps/backend/owmq-backend/bin
+apps/backend/.env
