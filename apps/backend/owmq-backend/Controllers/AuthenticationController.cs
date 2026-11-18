@@ -1,17 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using owmq_backend.Dto.Authentication;
 using owmq_backend.Services.Authentication;
+using owmq_backend.database;
 namespace owmq_backend.Controllers;
 
 [ApiController]
 [Route("[controller]")] // route lives at /authentication
 public class AuthenticationController : ControllerBase{
 
-
 	private readonly ILogger<AuthenticationController> _logger;
+	private readonly owmqDbContext _context;
 
-	public AuthenticationController(ILogger<AuthenticationController> logger){
+	public AuthenticationController(ILogger<AuthenticationController> logger, owmqDbContext context){
 		_logger = logger;
+		_context = context; // database context 
 	}
 
 	[HttpPost("signup")]
