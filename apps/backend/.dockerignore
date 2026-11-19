@@ -1,6 +1,7 @@
 **/bin/
 **/obj/
 **/.git/
+images
 **/appsettings.Local.json
 docker-compose*.yml
 Dockerfile*

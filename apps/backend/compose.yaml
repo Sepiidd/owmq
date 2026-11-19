@@ -11,6 +11,10 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    volumes:
+      - type: bind
+        source: ./images
+        target: /app/images
 
   db:
     image: postgres:latest
