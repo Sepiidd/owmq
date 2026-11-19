@@ -1,5 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using owmq_backend.Database;
+using helpers.Images;
+
+//idempotent: read and add all images from local images directory to postgres db
+ImagesInit initializer = new ImagesInit();
+initializer.readImages();
 
 var builder = WebApplication.CreateBuilder(args);
 // if backend opened on local host machine and not docker, add Local environment appsettings (assumes postgres lives on port 5432 and localhost)
