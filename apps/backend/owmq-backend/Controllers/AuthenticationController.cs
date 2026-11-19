@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using owmq_backend.Dto.Authentication;
 using owmq_backend.Services.Authentication;
-using owmq_backend.database;
+using owmq_backend.Database;
 namespace owmq_backend.Controllers;
 
 [ApiController]

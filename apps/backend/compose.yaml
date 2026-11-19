@@ -13,7 +13,7 @@ services:
         condition: service_healthy
     volumes:
       - type: bind
-        source: ./images
+        source: ./owmq-backend/images
         target: /app/images
 
   db:

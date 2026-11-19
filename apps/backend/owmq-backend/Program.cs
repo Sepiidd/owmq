@@ -1,4 +1,5 @@
-using owmq_backend.database
+using Microsoft.EntityFrameworkCore;
+using owmq_backend.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 // if backend opened on local host machine and not docker, add Local environment appsettings (assumes postgres lives on port 5432 and localhost)
@@ -6,7 +7,7 @@ builder.Configuration.AddJsonFile("appsettings.Local.json", optional: true);
 
 // database stuff
 var connString = builder.Configuration.GetConnectionString("Default") ?? throw new InvalidOperationException("Connection String 'Default' not found...");
-builder.Services.AddDbContext<owmqDbContext>(options => options.useNpgsql(connString))
+builder.Services.AddDbContext<owmqDbContext>(options => options.UseNpgsql(connString));
 
 // Add services to the container.
 builder.Services.AddControllers();
