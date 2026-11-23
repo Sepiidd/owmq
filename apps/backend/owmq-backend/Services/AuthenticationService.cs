@@ -1,15 +1,25 @@
 using owmq_backend.Dto.Authentication;
-namespace owmq_backend.Services.Authentication;
+using owmq_backend.Interfaces;
+using owmq_backend.Database;
+namespace owmq_backend.Services;
 
-public static class AuthenticationService{
+public class AuthenticationService : IAuthenticationService
+{
+	private readonly owmqDbContext _db;
+
+	public AuthenticationService(owmqDbContext dbContext){
+		_db = dbContext;
+	}
 
 	//TODO
-	public static SignUpOutputDto SignUp(SignUpInputDto signup){
+	public SignUpOutputDto SignUp(SignUpDto signup)
+	{
 		return new SignUpOutputDto();
 	}
 
 	//TODO
-	public static SignInOutputDto SignIn(SignInInputDto credentials){
+	public SignInOutputDto SignIn(SignInDto credentials)
+	{
 		return new SignInOutputDto();
 	}
 }

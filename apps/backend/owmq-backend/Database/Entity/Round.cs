@@ -11,5 +11,5 @@ public class Round{
 	public ScreenshotMap Screenshot {get; set;} = null!; 
 	public int GameId {get; set;}
 	public Game Game {get; set;} = null!;
-	public required List<RoundGuess> Guesses {get; set;} = new List<RoundGuess>(); //one round can have many guesses, one to many relationship
+	public List<RoundGuess> Guesses {get; set;} = new List<RoundGuess>(); //one round can have many guesses, one to many relationship
 }

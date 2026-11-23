@@ -1,28 +1,31 @@
 using Microsoft.AspNetCore.Mvc;
 using owmq_backend.Dto.Authentication;
-using owmq_backend.Services.Authentication;
-using owmq_backend.Database;
+using owmq_backend.Interfaces;
 namespace owmq_backend.Controllers;
 
 [ApiController]
-[Route("[controller]")] // route lives at /authentication
-public class AuthenticationController : ControllerBase{
+[Route("[controller]")] // route lives at controller name: /authentication
+public class AuthenticationController : ControllerBase
+{
 
 	private readonly ILogger<AuthenticationController> _logger;
-	private readonly owmqDbContext _context;
+	private readonly IAuthenticationService _service;
 
-	public AuthenticationController(ILogger<AuthenticationController> logger, owmqDbContext context){
+	public AuthenticationController(ILogger<AuthenticationController> logger, IAuthenticationService AuthService)
+	{
 		_logger = logger;
-		_context = context; // database context 
+		_service = AuthService;
 	}
 
 	[HttpPost("signup")]
-	public ActionResult<SignUpOutputDto> signup(SignUpInputDto signup){
-		return AuthenticationService.SignUp(signup);
+	public ActionResult<SignUpOutputDto> signup(SignUpDto signup)
+	{
+		return _service.SignUp(signup);
 	}
-		
+
 	[HttpPost("signin")]
-	public ActionResult<SignInOutputDto> signin(SignInInputDto credentials){
-		return AuthenticationService.SignIn(credentials);
+	public ActionResult<SignInOutputDto> signin(SignInDto credentials)
+	{
+		return _service.SignIn(credentials);
 	}
 }

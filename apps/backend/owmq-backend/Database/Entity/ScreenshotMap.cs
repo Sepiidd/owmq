@@ -11,5 +11,5 @@ public class ScreenshotMap{
 
 	public int MapId {get; set;}
 	public Map Map {get; set;} = null!; //a screenshot can be matched only to one map, one to many relationship
-	public required List<Round> Rounds {get; set;} = new List<Round>(); //one screenshot can be matched to many rounds, one to many relationship
+	public List<Round> Rounds {get; set;} = new List<Round>(); //one screenshot can be matched to many rounds, one to many relationship
 }
